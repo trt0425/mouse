@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>歡迎成為我的家人·͜·♡</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      text-align: center;
+      background-color: #fffaf6;
+      padding: 40px;
+    }
+    h1 {
+      color: #d14b8f;
+      font-size: 28px;
+    }
+    img {
+      width: 200px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    #qrcode {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+      margin-top: 30px;
+    }
+    p {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>歡迎成為我的家人·͜·♡</h1>
+
+  <!-- 圖片 -->
+  <img src="mouse.jpg" alt="個人照片">
+
+  <!-- QR Code 產生器容器 -->
+  <div id="qrcode"></div>
+
+  <p>掃描 QR 碼查看完整照片</p>
+
+  <!-- QR Code JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://drive.google.com/file/d/11RinhjBz-h2xBxjdQC0crCyfwE_9SS2q/view?usp=drivesdk",
+      width: 200,
+      height: 200
+    });
+  </script>
+</body>
+</html>
